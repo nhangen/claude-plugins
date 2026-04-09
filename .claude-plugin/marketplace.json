@@ -24,7 +24,7 @@
         "repo": "nhangen/token-scope"
       },
       "description": "Token spend analytics and cost alerts for Claude Code. 10 report modes, tooling analysis by layer, auto-checkpoint hook for session cost control.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "analytics"
     }
   ]
