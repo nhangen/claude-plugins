@@ -4,7 +4,7 @@
     "name": "nhangen"
   },
   "metadata": {
-    "description": "Claude Code plugins by nhangen — Obsidian integration and token analytics"
+    "description": "Claude Code plugins by nhangen — Obsidian integration, token analytics, and knowledge graph"
   },
   "plugins": [
     {
@@ -25,6 +25,16 @@
       },
       "description": "Token spend analytics and cost alerts for Claude Code. 14 report modes including cache intelligence, tooling analysis by layer, auto-checkpoint hook for session cost control.",
       "version": "1.1.1",
+      "category": "analytics"
+    },
+    {
+      "name": "claude-mem-graph",
+      "source": {
+        "source": "github",
+        "repo": "nhangen/claude-mem-graph"
+      },
+      "description": "Graph-aware context retrieval over claude-mem observations. Builds an in-memory knowledge graph with 9 inferred edge types for relationship-aware queries, staleness detection, session arc tracking, and cross-project file impact analysis.",
+      "version": "0.1.0",
       "category": "analytics"
     }
   ]
