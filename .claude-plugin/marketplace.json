@@ -36,6 +36,16 @@
       "description": "Graph-aware context retrieval over claude-mem observations. Builds an in-memory knowledge graph with 9 inferred edge types for relationship-aware queries, staleness detection, session arc tracking, and cross-project file impact analysis.",
       "version": "0.1.0",
       "category": "analytics"
+    },
+    {
+      "name": "ceo",
+      "source": {
+        "source": "github",
+        "repo": "nhangen/claude-ceo"
+      },
+      "description": "Autonomous CEO agent. Reads Obsidian vault, prioritizes work, proposes actions by authority tier, learns from corrections.",
+      "version": "0.1.0",
+      "category": "productivity"
     }
   ]
 }
