@@ -43,8 +43,8 @@
         "source": "github",
         "repo": "nhangen/claude-ceo"
       },
-      "description": "Autonomous CEO agent. Reads Obsidian vault, prioritizes work, proposes actions by authority tier, learns from corrections. 7 playbooks, 6 skills, cron execution pipeline.",
-      "version": "0.2.0",
+      "description": "Autonomous CEO agent. Reads Obsidian vault, dispatches 6 specialized subagents, 7 playbooks, 7 skills, cron execution pipeline with three-phase tier enforcement.",
+      "version": "0.3.0",
       "category": "productivity"
     }
   ]
