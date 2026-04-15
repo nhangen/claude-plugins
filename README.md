@@ -41,6 +41,36 @@ claude plugin install token-scope@nhangen-tools
 
 **Repo:** [nhangen/token-scope](https://github.com/nhangen/token-scope)
 
+### claude-mem-graph
+
+Causal tracing layer over claude-mem. Use flat search to find an observation, then use graph neighbors to trace what led to it and what followed.
+
+```bash
+claude plugin install claude-mem-graph@nhangen-tools
+```
+
+- Extracts `informed_by` edges from observation narrative text (1,300+ causal edges)
+- Cross-project keyword search across all observation fields
+- Session arc tracking (which sessions continue previous work)
+- File history across projects
+- Usage analytics via `npm run stats`
+
+**Repo:** [nhangen/claude-mem-graph](https://github.com/nhangen/claude-mem-graph)
+
+### ceo
+
+Autonomous CEO agent. Reads Obsidian vault, dispatches specialized subagents, executes playbooks on a cron schedule with three-phase tier enforcement.
+
+```bash
+claude plugin install ceo@nhangen-tools
+```
+
+- 7 playbooks, 7 skills, 6 agent roles
+- Cron execution pipeline with delegation protocol
+- Reads vault for context, writes decisions back
+
+**Repo:** [nhangen/claude-ceo](https://github.com/nhangen/claude-ceo)
+
 ## Usage
 
 After installing a plugin, its skills, hooks, and commands are available in Claude Code automatically. Run `claude plugin list` to see installed plugins.
