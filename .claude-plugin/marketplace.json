@@ -4,7 +4,7 @@
     "name": "nhangen"
   },
   "metadata": {
-    "description": "Claude Code plugins by nhangen — Obsidian integration, token analytics, and knowledge graph"
+    "description": "Claude Code plugins by nhangen — Obsidian integration, token analytics, knowledge graph, and documentation scanning"
   },
   "plugins": [
     {
@@ -46,6 +46,16 @@
       "description": "Autonomous CEO agent. Reads Obsidian vault, dispatches 6 specialized subagents, 7 playbooks, 7 skills, cron execution pipeline with three-phase tier enforcement.",
       "version": "0.3.0",
       "category": "productivity"
+    },
+    {
+      "name": "md-scanner",
+      "source": {
+        "source": "github",
+        "repo": "nhangen/md-scanner"
+      },
+      "description": "Behavioral markdown documentation scanner. Analyzes session history to find gaps in CLAUDE.md, rules, and memory files. Detects repeated file reads, command failures, recurring user corrections, and more. Guided walkthrough to approve/skip/defer recommendations.",
+      "version": "1.0.0",
+      "category": "analytics"
     }
   ]
 }

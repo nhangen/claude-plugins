@@ -71,6 +71,22 @@ claude plugin install ceo@nhangen-tools
 
 **Repo:** [nhangen/claude-ceo](https://github.com/nhangen/claude-ceo)
 
+### md-scanner
+
+Behavioral markdown documentation scanner. Finds gaps in CLAUDE.md, rules, and memory by analyzing what actually happens during sessions.
+
+```bash
+claude plugin install md-scanner@nhangen-tools
+```
+
+- Stop hook tags each session with structured extracts (file reads, bash errors, user messages, tool sequences)
+- `/md-scanner` skill correlates patterns across sessions and recommends specific additions
+- Routes to the right surface: project CLAUDE.md, global CLAUDE.md, rules, memory, or skill candidates
+- Guided walkthrough: approve, skip, edit, defer each recommendation
+- Cross-references token-scope (bloat), RTK (command failures), and claude-mem (concepts)
+
+**Repo:** [nhangen/md-scanner](https://github.com/nhangen/md-scanner)
+
 ## Usage
 
 After installing a plugin, its skills, hooks, and commands are available in Claude Code automatically. Run `claude plugin list` to see installed plugins.
