@@ -64,4 +64,6 @@ done
 
 echo ""
 echo "Done: $UPDATED updated, $SKIPPED up-to-date, $FAILED failed"
-[ "$DRY_RUN" = true ] && echo "(dry run — no files changed)"
+if [ "$DRY_RUN" = true ]; then
+  echo "(dry run — no files changed)"
+fi
