@@ -44,7 +44,7 @@
         "repo": "nhangen/claude-ceo"
       },
       "description": "Autonomous CEO agent. Reads Obsidian vault, dispatches 6 specialized subagents, 7 playbooks, 7 skills, cron execution pipeline with three-phase tier enforcement. CLI with setup/doctor/test.",
-      "version": "0.3.1",
+      "version": "0.3.2",
       "category": "productivity"
     },
     {
