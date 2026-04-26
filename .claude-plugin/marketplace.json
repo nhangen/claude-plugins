@@ -53,8 +53,8 @@
         "source": "github",
         "repo": "nhangen/md-scanner"
       },
-      "description": "Behavioral markdown documentation scanner. Analyzes session history to find gaps in CLAUDE.md, rules, and memory files. Detects repeated file reads, command failures, recurring user corrections, and more. Guided walkthrough to approve/skip/defer recommendations.",
-      "version": "1.1.0",
+      "description": "Behavioral markdown documentation scanner. Analyzes session history to find gaps in CLAUDE.md, rules, memory, and project settings. Detects repeated file reads, command failures, recurring user corrections, allowlist gaps, unused CLAUDE.md sections, documented-but-still-re-read paths, and Cursor↔Claude rule drift. Guided walkthrough to approve/skip/defer recommendations.",
+      "version": "1.2.0",
       "category": "analytics"
     }
   ]
