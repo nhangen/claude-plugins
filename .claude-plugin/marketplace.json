@@ -56,6 +56,16 @@
       "description": "Behavioral markdown documentation scanner. Analyzes session history to find gaps in CLAUDE.md, rules, memory, and project settings. Detects repeated file reads, command failures, recurring user corrections, allowlist gaps, unused CLAUDE.md sections, documented-but-still-re-read paths, and Cursor↔Claude rule drift. Guided walkthrough to approve/skip/defer recommendations.",
       "version": "1.2.0",
       "category": "analytics"
+    },
+    {
+      "name": "context-loop",
+      "source": {
+        "source": "github",
+        "repo": "nhangen/context-loop"
+      },
+      "description": "Auto-checkpoint and /compact when context fill crosses thresholds. Stop-hook gate computes fill % from the live transcript; clean-context subagent produces a verbatim Live State brief; brief is pinned through /compact and written to durable storage. Keeps live conversation perpetually under ~40% fill.",
+      "version": "0.1.0",
+      "category": "productivity"
     }
   ]
 }
