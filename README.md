@@ -33,7 +33,7 @@ Token spend analytics and cost alerts for Claude Code. Answers: where is my mone
 claude plugin install token-scope@nhangen-tools
 ```
 
-- 10 report modes: summary, tool drill-down, sessions, project, cache efficiency, context bloat, session efficiency, thinking analysis, tooling by layer
+- 14 report modes: summary, tool drill-down, sessions, project, cache efficiency, context bloat, session efficiency, thinking analysis, tooling by layer, context-loop savings, and more
 - Cost alert hook warns when sessions get expensive
 - Auto-checkpoint saves session context when cost thresholds are crossed
 - All reports support `--json` for machine-readable output
@@ -59,7 +59,7 @@ claude plugin install claude-mem-graph@nhangen-tools
 
 ### ceo
 
-Autonomous CEO agent. Reads Obsidian vault, dispatches specialized subagents, executes playbooks on a cron schedule with three-phase tier enforcement.
+Autonomous CEO agent. Reads Obsidian vault, dispatches 6 specialized subagents, runs 7 playbooks on a cron schedule with three-phase tier enforcement, exposes a CLI with setup/doctor/test.
 
 ```bash
 claude plugin install ceo@nhangen-tools
@@ -67,6 +67,7 @@ claude plugin install ceo@nhangen-tools
 
 - 7 playbooks, 7 skills, 6 agent roles
 - Cron execution pipeline with delegation protocol
+- Daily token-intake report (RTK + token-scope) with per-host inbox routing
 - Reads vault for context, writes decisions back
 
 **Repo:** [nhangen/claude-ceo](https://github.com/nhangen/claude-ceo)
@@ -86,6 +87,21 @@ claude plugin install md-scanner@nhangen-tools
 - Cross-references token-scope (bloat), RTK (command failures), and claude-mem (concepts)
 
 **Repo:** [nhangen/md-scanner](https://github.com/nhangen/md-scanner)
+
+### context-loop
+
+Auto-checkpoint and `/compact` when context fill crosses thresholds. Keeps the live conversation perpetually under ~40% fill.
+
+```bash
+claude plugin install context-loop@nhangen-tools
+```
+
+- Stop-hook gate computes fill % from the live transcript
+- Clean-context subagent produces a verbatim Live State brief
+- Brief is pinned through `/compact` and written to durable storage (claude-mem + Obsidian)
+- Tiered advisories escalate as fill rises
+
+**Repo:** [nhangen/context-loop](https://github.com/nhangen/context-loop)
 
 ## Usage
 
