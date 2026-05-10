@@ -66,6 +66,16 @@
       "description": "Auto-checkpoint and /compact when context fill crosses thresholds. Stop-hook gate computes fill % from the live transcript; clean-context subagent produces a verbatim Live State brief; brief is pinned through /compact and written to durable storage. Keeps live conversation perpetually under ~40% fill.",
       "version": "0.1.0",
       "category": "productivity"
+    },
+    {
+      "name": "gitnexus-edit-augment",
+      "source": {
+        "source": "github",
+        "repo": "nhangen/gitnexus-edit-augment"
+      },
+      "description": "PreToolUse hook that runs gitnexus impact on the symbol being edited and injects the blast-radius summary as additionalContext at the moment of editing. Companion to GitNexus's shipped Grep/Glob/Bash hook (which only covers the search phase, not the edit phase).",
+      "version": "0.1.0",
+      "category": "productivity"
     }
   ]
 }
