@@ -1,6 +1,6 @@
-# nhangen Claude Code Plugins
+# nhangen-tools
 
-Custom plugins for [Claude Code](https://claude.ai/claude-code).
+Claude Code plugin marketplace for nhangen's personal and team plugins.
 
 ## Install
 
@@ -10,102 +10,21 @@ claude plugin marketplace add nhangen/claude-plugins
 
 ## Plugins
 
-### obsidian
+| Name | Description | Install |
+|---|---|---|
+| obsidian | Obsidian vault integration for Claude Code. Auto-capture git commits, save sessions, query past work with /recall, export conversations. Supports user-defined VAULT.md conventions. | `claude plugin install obsidian@nhangen-tools` |
+| token-scope | Token spend analytics and cost alerts for Claude Code. 15 report modes including cache intelligence, tooling analysis by layer, per-artifact Write/Edit cost analytics, auto-checkpoint hook for session cost control. | `claude plugin install token-scope@nhangen-tools` |
+| claude-mem-graph | Causal tracing layer over claude-mem. Extracts informed_by edges from observation narratives to trace what led to what. Cross-project search, session arc tracking, file history. 5 MCP tools, 10 edge types. | `claude plugin install claude-mem-graph@nhangen-tools` |
+| ceo | Autonomous CEO agent. Reads Obsidian vault, dispatches 6 specialized subagents, 7 playbooks, 7 skills, cron execution pipeline with three-phase tier enforcement. CLI with setup/doctor/test. | `claude plugin install ceo@nhangen-tools` |
+| md-scanner | Behavioral markdown documentation scanner. Analyzes session history to find gaps in CLAUDE.md, rules, memory, and project settings. Detects repeated file reads, command failures, recurring user corrections, allowlist gaps, unused CLAUDE.md sections, documented-but-still-re-read paths, and Cursor↔Claude rule drift. Guided walkthrough to approve/skip/defer recommendations. | `claude plugin install md-scanner@nhangen-tools` |
+| context-loop | Auto-checkpoint and /compact when context fill crosses thresholds. Stop-hook gate computes fill % from the live transcript; clean-context subagent produces a verbatim Live State brief; brief is pinned through /compact and written to durable storage. Keeps live conversation perpetually under ~40% fill. | `claude plugin install context-loop@nhangen-tools` |
+| gitnexus-edit-augment | PreToolUse hook that runs gitnexus impact on the symbol being edited and injects the blast-radius summary as additionalContext at the moment of editing. Companion to GitNexus's shipped Grep/Glob/Bash hook (which only covers the search phase, not the edit phase). | `claude plugin install gitnexus-edit-augment@nhangen-tools` |
 
-Obsidian vault integration for Claude Code. Auto-capture git commits, save sessions, query past work, export conversations.
-
-```bash
-claude plugin install obsidian@nhangen-tools
-```
-
-- Auto-captures git commit context to Obsidian vault notes
-- Session summarizer saves conversation context on session end
-- `/recall` skill queries past work across sessions
-- Configurable vault routing for multi-vault setups
-
-**Repo:** [nhangen/claude-obsidian-plugin](https://github.com/nhangen/claude-obsidian-plugin)
-
-### token-scope
-
-Token spend analytics and cost alerts for Claude Code. Answers: where is my money going, and am I wasting it?
+## Updating
 
 ```bash
-claude plugin install token-scope@nhangen-tools
+claude plugin update <name>@nhangen-tools
 ```
-
-- 14 report modes: summary, tool drill-down, sessions, project, cache efficiency, context bloat, session efficiency, thinking analysis, tooling by layer, context-loop savings, and more
-- Cost alert hook warns when sessions get expensive
-- Auto-checkpoint saves session context when cost thresholds are crossed
-- All reports support `--json` for machine-readable output
-- Proportional cost attribution across all tool layers (plugin, MCP, skill, meta, built-in)
-
-**Repo:** [nhangen/token-scope](https://github.com/nhangen/token-scope)
-
-### claude-mem-graph
-
-Causal tracing layer over claude-mem. Use flat search to find an observation, then use graph neighbors to trace what led to it and what followed.
-
-```bash
-claude plugin install claude-mem-graph@nhangen-tools
-```
-
-- Extracts `informed_by` edges from observation narrative text (1,300+ causal edges)
-- Cross-project keyword search across all observation fields
-- Session arc tracking (which sessions continue previous work)
-- File history across projects
-- Usage analytics via `npm run stats`
-
-**Repo:** [nhangen/claude-mem-graph](https://github.com/nhangen/claude-mem-graph)
-
-### ceo
-
-Autonomous CEO agent. Reads Obsidian vault, dispatches 6 specialized subagents, runs 7 playbooks on a cron schedule with three-phase tier enforcement, exposes a CLI with setup/doctor/test.
-
-```bash
-claude plugin install ceo@nhangen-tools
-```
-
-- 7 playbooks, 7 skills, 6 agent roles
-- Cron execution pipeline with delegation protocol
-- Daily token-intake report (RTK + token-scope) with per-host inbox routing
-- Reads vault for context, writes decisions back
-
-**Repo:** [nhangen/claude-ceo](https://github.com/nhangen/claude-ceo)
-
-### md-scanner
-
-Behavioral markdown documentation scanner. Finds gaps in CLAUDE.md, rules, and memory by analyzing what actually happens during sessions.
-
-```bash
-claude plugin install md-scanner@nhangen-tools
-```
-
-- Stop hook tags each session with structured extracts (file reads, bash errors, user messages, tool sequences)
-- `/md-scanner` skill correlates patterns across sessions and recommends specific additions
-- Routes to the right surface: project CLAUDE.md, global CLAUDE.md, rules, memory, or skill candidates
-- Guided walkthrough: approve, skip, edit, defer each recommendation
-- Cross-references token-scope (bloat), RTK (command failures), and claude-mem (concepts)
-
-**Repo:** [nhangen/md-scanner](https://github.com/nhangen/md-scanner)
-
-### context-loop
-
-Auto-checkpoint and `/compact` when context fill crosses thresholds. Keeps the live conversation perpetually under ~40% fill.
-
-```bash
-claude plugin install context-loop@nhangen-tools
-```
-
-- Stop-hook gate computes fill % from the live transcript
-- Clean-context subagent produces a verbatim Live State brief
-- Brief is pinned through `/compact` and written to durable storage (claude-mem + Obsidian)
-- Tiered advisories escalate as fill rises
-
-**Repo:** [nhangen/context-loop](https://github.com/nhangen/context-loop)
-
-## Usage
-
-After installing a plugin, its skills, hooks, and commands are available in Claude Code automatically. Run `claude plugin list` to see installed plugins.
 
 ## License
 
