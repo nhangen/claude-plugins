@@ -14,7 +14,7 @@
         "repo": "nhangen/claude-obsidian-plugin"
       },
       "description": "Obsidian vault integration for Claude Code. Auto-capture git commits, save sessions, query past work with /recall, export conversations. Supports user-defined VAULT.md conventions.",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "category": "productivity"
     },
     {
@@ -34,7 +34,7 @@
         "repo": "nhangen/claude-mem-graph"
       },
       "description": "Causal tracing layer over claude-mem. Extracts informed_by edges from observation narratives to trace what led to what. Cross-project search, session arc tracking, file history. 5 MCP tools, 10 edge types.",
-      "version": "0.2.2",
+      "version": "0.2.3",
       "category": "analytics"
     },
     {
