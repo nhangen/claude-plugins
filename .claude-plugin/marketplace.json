@@ -103,8 +103,8 @@
         "source": "github",
         "repo": "nhangen/manus-dispatch"
       },
-      "description": "Dispatch long-running research tasks to the Manus AI agent platform from Claude Code via slash command. On-demand polling (no orphaned background processes), optional Obsidian filing, explicit-invocation cost gating. Manus does the autonomous research; Claude orchestrates.",
-      "version": "0.1.0",
+      "description": "Dispatch long-running research tasks to the Manus AI agent platform from Claude Code via slash command. SessionStart hook surfaces newly-completed tasks on the next session (zero extra Claude turns). On-demand polling, optional Obsidian filing, explicit-invocation cost gating.",
+      "version": "0.1.1",
       "category": "productivity"
     }
   ]
