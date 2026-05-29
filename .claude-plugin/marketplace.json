@@ -96,6 +96,16 @@
       "description": "Captures (features, label, evidence) tuples from Claude Code sessions as ML training data. PreToolUse/PostToolUse hooks write per-tool-call feature rows; phrase-based detector + LLM-as-judge label corrections against a failure-mode taxonomy seeded from ~/.claude/rules/. Joiner emits parquet ready for fine-tuning, DPO, or eval. Private repo.",
       "version": "0.1.0",
       "category": "analytics"
+    },
+    {
+      "name": "manus-dispatch",
+      "source": {
+        "source": "github",
+        "repo": "nhangen/manus-dispatch"
+      },
+      "description": "Dispatch long-running research tasks to the Manus AI agent platform from Claude Code via slash command. On-demand polling (no orphaned background processes), optional Obsidian filing, explicit-invocation cost gating. Manus does the autonomous research; Claude orchestrates.",
+      "version": "0.1.0",
+      "category": "productivity"
     }
   ]
 }
