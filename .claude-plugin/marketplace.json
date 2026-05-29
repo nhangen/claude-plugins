@@ -103,8 +103,8 @@
         "source": "github",
         "repo": "nhangen/manus-dispatch"
       },
-      "description": "Dispatch long-running research tasks to the Manus AI agent platform from Claude Code via slash command. SessionStart hook surfaces newly-completed tasks on the next session (zero extra Claude turns). On-demand polling, optional Obsidian filing, explicit-invocation cost gating.",
-      "version": "0.1.1",
+      "description": "Dispatch long-running research tasks to the Manus AI agent platform from Claude Code via slash command. SessionStart + Stop hooks surface newly-completed tasks both on next session and mid-conversation (zero extra Claude turns). On-demand polling, optional Obsidian filing, explicit-invocation cost gating.",
+      "version": "0.1.2",
       "category": "productivity"
     }
   ]
