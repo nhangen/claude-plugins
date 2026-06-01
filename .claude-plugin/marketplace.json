@@ -24,7 +24,7 @@
         "repo": "nhangen/token-scope"
       },
       "description": "Token spend analytics and cost alerts for Claude Code. 15 report modes including cache intelligence, tooling analysis by layer, per-artifact Write/Edit cost analytics, auto-checkpoint hook for session cost control.",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "category": "analytics"
     },
     {
@@ -93,8 +93,8 @@
         "source": "github",
         "repo": "nhangen/cc-pattern-tracker"
       },
-      "description": "Captures (features, label, evidence) tuples from Claude Code sessions as ML training data. PreToolUse/PostToolUse hooks write per-tool-call feature rows; phrase-based detector + LLM-as-judge label corrections against a failure-mode taxonomy seeded from ~/.claude/rules/. Joiner emits parquet ready for fine-tuning, DPO, or eval. Private repo.",
-      "version": "0.1.0",
+      "description": "Captures (features, label, evidence) tuples from Claude Code sessions as ML training data. PreToolUse/PostToolUse hooks write per-tool-call feature rows; phrase-based detector + LLM-as-judge label corrections against a failure-mode taxonomy seeded from ~/.claude/rules/. Joiner emits parquet ready for fine-tuning, DPO, or eval. Includes `pt cost-by-failure` fusion view joining findings to token-scope per-session cost. Private repo.",
+      "version": "0.2.0",
       "category": "analytics"
     },
     {
