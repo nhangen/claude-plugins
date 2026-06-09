@@ -4,7 +4,7 @@
     "name": "nhangen"
   },
   "metadata": {
-    "description": "Claude Code plugins by nhangen — Obsidian integration, token analytics, knowledge graph, and documentation scanning"
+    "description": "Claude Code plugins by nhangen \u2014 Obsidian integration, token analytics, knowledge graph, and documentation scanning"
   },
   "plugins": [
     {
@@ -14,7 +14,7 @@
         "repo": "nhangen/claude-obsidian-plugin"
       },
       "description": "Obsidian vault integration for Claude Code. Auto-capture git commits, save sessions, query past work with /recall, export conversations. Supports user-defined VAULT.md conventions.",
-      "version": "1.6.1",
+      "version": "1.7.0",
       "category": "productivity"
     },
     {
@@ -53,7 +53,7 @@
         "source": "github",
         "repo": "nhangen/md-scanner"
       },
-      "description": "Behavioral markdown documentation scanner. Analyzes session history to find gaps in CLAUDE.md, rules, memory, and project settings. Detects repeated file reads, command failures, recurring user corrections, allowlist gaps, unused CLAUDE.md sections, documented-but-still-re-read paths, and Cursor↔Claude rule drift. Guided walkthrough to approve/skip/defer recommendations.",
+      "description": "Behavioral markdown documentation scanner. Analyzes session history to find gaps in CLAUDE.md, rules, memory, and project settings. Detects repeated file reads, command failures, recurring user corrections, allowlist gaps, unused CLAUDE.md sections, documented-but-still-re-read paths, and Cursor\u2194Claude rule drift. Guided walkthrough to approve/skip/defer recommendations.",
       "version": "1.2.0",
       "category": "analytics"
     },
