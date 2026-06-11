@@ -63,8 +63,8 @@
         "source": "github",
         "repo": "nhangen/context-loop"
       },
-      "description": "Auto-checkpoint and /compact when context fill crosses thresholds. Stop-hook gate computes fill % from the live transcript; clean-context subagent produces a verbatim Live State brief; brief is pinned through /compact and written to durable storage. Keeps live conversation perpetually under ~40% fill.",
-      "version": "0.1.0",
+      "description": "Auto-compact when context fill crosses thresholds. Stop-hook gate computes fill % from the live transcript; fires an advisory at 35% and escalated nudge at 50%, both directing /compact. Correctly detects Opus (1M window) vs other models (200K).",
+      "version": "0.1.1",
       "category": "productivity"
     },
     {
