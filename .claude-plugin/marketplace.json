@@ -63,8 +63,8 @@
         "source": "github",
         "repo": "nhangen/context-loop"
       },
-      "description": "Auto-compact when context fill crosses thresholds. Stop-hook gate computes fill % from the live transcript; fires an advisory at 35% and escalated nudge at 50%, both directing /compact. Correctly detects Opus (1M window) vs other models (200K).",
-      "version": "0.1.1",
+      "description": "Auto-compact when context fill crosses thresholds. Stop-hook gate computes fill % from the live transcript; fires an advisory at 35% and escalated nudge at 50%, both directing /compact. Context-window divisor is a dynamic var (CONTEXT_LOOP_WINDOW override; falls back to Opus 1M / other 200K heuristic).",
+      "version": "0.1.2",
       "category": "productivity"
     },
     {
