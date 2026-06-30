@@ -83,8 +83,8 @@
         "source": "github",
         "repo": "nhangen/domain-glossary"
       },
-      "description": "Source-grounded project glossary. Auto-invokes when the agent encounters an unfamiliar acronym or project-specific term in a registered repo: resolves the current cwd to a domain via per-machine config (with git-worktree fallback), reads the matching glossary, and answers cited rather than guessing. Also handles seed (build candidates from claude-mem / commits / GitNexus / docs) and drift-check (verify every citation still resolves).",
-      "version": "0.2.0",
+      "description": "Source-grounded project glossary. Auto-invokes when the agent encounters an unfamiliar acronym or project-specific term in a registered repo: resolves the current cwd to a domain via per-machine config (with git-worktree fallback), reads the matching glossary, and answers cited rather than guessing. Also handles seed (build candidates from commits / GitNexus / docs) and drift-check (verify every citation still resolves).",
+      "version": "0.2.1",
       "category": "productivity"
     },
     {
