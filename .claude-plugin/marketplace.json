@@ -28,16 +28,6 @@
       "category": "analytics"
     },
     {
-      "name": "claude-mem-graph",
-      "source": {
-        "source": "github",
-        "repo": "nhangen/claude-mem-graph"
-      },
-      "description": "Causal tracing layer over claude-mem. Extracts informed_by edges from observation narratives to trace what led to what. Cross-project search, session arc tracking, file history, playbook lineage. 6 MCP tools, 10 edge types.",
-      "version": "0.2.5",
-      "category": "analytics"
-    },
-    {
       "name": "ceo",
       "source": {
         "source": "github",
