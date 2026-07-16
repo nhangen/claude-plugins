@@ -83,8 +83,8 @@
         "source": "github",
         "repo": "nhangen/cc-pattern-tracker"
       },
-      "description": "Captures (features, label, evidence) tuples from Claude Code sessions as ML training data. PreToolUse/PostToolUse hooks write per-tool-call feature rows; phrase-based detector + LLM-as-judge label corrections against a failure-mode taxonomy seeded from ~/.claude/rules/. Joiner emits parquet ready for fine-tuning, DPO, or eval. Includes `pt cost-by-failure` fusion view joining findings to token-scope per-session cost. Private repo.",
-      "version": "0.2.1",
+      "description": "Captures (features, label, evidence) tuples from Claude Code sessions as ML training data. PreToolUse/PostToolUse hooks write per-tool-call feature rows; phrase-based detector + LLM-as-judge label corrections against a failure-mode taxonomy seeded from ~/.claude/rules/. Joiner emits JSONL ready for fine-tuning, DPO, or eval. Includes `pt cost-by-failure` fusion view joining findings to token-scope per-session cost. Dependency-free (stdlib-only, no venv). Private repo.",
+      "version": "0.3.0",
       "category": "analytics"
     },
     {
