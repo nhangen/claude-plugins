@@ -14,7 +14,7 @@
         "repo": "nhangen/claude-obsidian-plugin"
       },
       "description": "Obsidian vault integration for Claude Code. Auto-capture git commits, save sessions, query past work with /recall, export conversations. Supports user-defined VAULT.md conventions.",
-      "version": "1.20.0",
+      "version": "1.21.0",
       "category": "productivity"
     },
     {
