@@ -3,7 +3,9 @@
 This repo is a marketplace index only. `.claude-plugin/marketplace.json` lists the
 plugins, and each entry's `source.repo` points at the `nhangen/*` repo that holds the
 code. Never add plugin code here. Find a plugin's local source in
-`~/.config/branch-cleanup/repos.md`; most live under `~/ML-AI/claude/<plugin>/`.
+`~/.config/branch-cleanup/repos.md`; most live under `~/ML-AI/claude/<repo>/`. The
+directory is named for the repo, which can differ from the plugin: `obsidian` lives in
+`obsidian-plugin/`.
 
 ## Bumping a plugin version
 
