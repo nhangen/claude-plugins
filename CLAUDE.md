@@ -21,6 +21,7 @@ code. Never add plugin code here. Find a plugin's local source in
   0.1.4 back to 0.1.3. Fetch before editing, because the bot may have moved `main`.
 - The bot's token can't read the private repos `nhangen/gitnexus-edit-augment` and
   `nhangen/cc-pattern-tracker`. It logs `fail:` for both on every run and still reports
-  success, so bump those two by hand.
+  success, so bump those two by hand. Any other `fail:` is a real breakage that the job
+  does not surface (#12).
 - Check for drift locally with `bash scripts/sync-versions.sh --dry-run` (needs `gh` and
   `jq`).
