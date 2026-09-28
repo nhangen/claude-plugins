@@ -15,6 +15,13 @@ if [ ! -f "$MARKETPLACE" ]; then
   exit 1
 fi
 
+# The workflow's GITHUB_TOKEN can't read these private repos; bump them by hand.
+# Any other read failure is a real breakage and fails the run (#12).
+EXPECTED_UNREADABLE=" gitnexus-edit-augment pattern-tracker "
+
+GH_ERR=$(mktemp)
+trap 'rm -f "$GH_ERR"' EXIT
+
 UPDATED=0
 SKIPPED=0
 FAILED=0
@@ -34,13 +41,20 @@ for i in $(seq 0 $((PLUGIN_COUNT - 1))); do
   fi
 
   # Fetch plugin.json from the repo's default branch
-  REMOTE_VERSION=$(gh api "repos/$REPO/contents/.claude-plugin/plugin.json" \
-    --jq '.content' 2>/dev/null \
-    | base64 -d 2>/dev/null \
-    | jq -r '.version // empty' 2>/dev/null) || true
+  if ! CONTENT=$(gh api "repos/$REPO/contents/.claude-plugin/plugin.json" --jq '.content' 2>"$GH_ERR"); then
+    if [[ "$EXPECTED_UNREADABLE" == *" $NAME "* ]]; then
+      echo "  skip: $NAME (private repo, not readable by this token)"
+      SKIPPED=$((SKIPPED + 1))
+    else
+      echo "  fail: $NAME — could not read $REPO: $(tail -1 "$GH_ERR")"
+      FAILED=$((FAILED + 1))
+    fi
+    continue
+  fi
+  REMOTE_VERSION=$(printf '%s' "$CONTENT" | base64 -d 2>/dev/null | jq -r '.version // empty' 2>/dev/null) || true
 
   if [ -z "$REMOTE_VERSION" ]; then
-    echo "  fail: $NAME — could not read version from $REPO"
+    echo "  fail: $NAME — no version in $REPO/.claude-plugin/plugin.json"
     FAILED=$((FAILED + 1))
     continue
   fi
@@ -67,3 +81,4 @@ echo "Done: $UPDATED updated, $SKIPPED up-to-date, $FAILED failed"
 if [ "$DRY_RUN" = true ]; then
   echo "(dry run — no files changed)"
 fi
+[ "$FAILED" -eq 0 ] || exit 1
