@@ -19,6 +19,9 @@ fi
 # Any other read failure is a real breakage and fails the run (#12).
 EXPECTED_UNREADABLE=" gitnexus-edit-augment pattern-tracker "
 
+GH_ERR=$(mktemp)
+trap 'rm -f "$GH_ERR"' EXIT
+
 UPDATED=0
 SKIPPED=0
 FAILED=0
@@ -38,12 +41,12 @@ for i in $(seq 0 $((PLUGIN_COUNT - 1))); do
   fi
 
   # Fetch plugin.json from the repo's default branch
-  if ! CONTENT=$(gh api "repos/$REPO/contents/.claude-plugin/plugin.json" --jq '.content' 2>&1); then
+  if ! CONTENT=$(gh api "repos/$REPO/contents/.claude-plugin/plugin.json" --jq '.content' 2>"$GH_ERR"); then
     if [[ "$EXPECTED_UNREADABLE" == *" $NAME "* ]]; then
       echo "  skip: $NAME (private repo, not readable by this token)"
       SKIPPED=$((SKIPPED + 1))
     else
-      echo "  fail: $NAME — could not read $REPO: $(printf '%s' "$CONTENT" | tail -1)"
+      echo "  fail: $NAME — could not read $REPO: $(tail -1 "$GH_ERR")"
       FAILED=$((FAILED + 1))
     fi
     continue
