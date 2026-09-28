@@ -19,7 +19,10 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash scripts/sync-versions.sh
 
+      # Runs after a failed sync too, so one unreadable repo doesn't hold back the
+      # other bumps; the job still reports red.
       - name: Commit and push if changed
+        if: ${{ !cancelled() }}
         run: |
           git diff --quiet .claude-plugin/marketplace.json && exit 0
           git config user.name "github-actions[bot]"
