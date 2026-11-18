@@ -96,6 +96,16 @@
       "description": "Dispatch long-running research tasks to the Manus AI agent platform from Claude Code via slash command. SessionStart + Stop hooks surface newly-completed tasks both on next session and mid-conversation (zero extra Claude turns). Retrieves file deliverables from their signed CDN links, so a task whose payload is an attachment no longer looks complete with the payload missing. On-demand polling, optional Obsidian filing, explicit-invocation cost gating.",
       "version": "0.1.6",
       "category": "productivity"
+    },
+    {
+      "name": "prose-craft",
+      "source": {
+        "source": "github",
+        "repo": "nhangen/prose-craft"
+      },
+      "description": "Makes AI writing less bad. A writing skill (subject-first sentences, no em dashes, complete sentences, concrete closings) plus a deterministic filter that feeds violations back to any agent until the text is clean.",
+      "version": "0.1.0",
+      "category": "writing"
     }
   ]
 }
