@@ -104,7 +104,7 @@
         "repo": "nhangen/prose-craft"
       },
       "description": "Makes AI writing less bad. A writing skill (subject-first sentences, no em dashes, complete sentences, concrete closings) plus a deterministic filter that feeds violations back to any agent until the text is clean.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "category": "writing"
     }
   ]
